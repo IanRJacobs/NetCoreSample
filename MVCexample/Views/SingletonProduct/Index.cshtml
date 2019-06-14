@@ -1,0 +1,37 @@
+﻿@model MVCexample.Models.ProductListViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title>title</title>
+</head>
+<body>
+    <div>
+        <table class="table">
+            <tr>
+                <td style="text-decoration:underline">
+                    Singleton Product Name
+                </td>
+            </tr>
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <td>
+                        @product.ProductName
+                    </td>
+
+                </tr>
+            }
+        </table>
+
+        <div>
+            <a asp-controller="SingletonProduct" asp-action="Add">Add Two Products</a>
+        </div>
+
+    </div>
+</body>
+</html>
+
