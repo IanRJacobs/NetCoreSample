@@ -21,17 +21,17 @@ namespace MVCexample.Controllers
         }
         public ActionResult Index()
         {
-            AddTwo();
+            AddOne();
             ProductListViewModel model = new ProductListViewModel(_productService.GetAll());
             return View(model);
         }
         public ActionResult Add()
         {
-            AddTwo();
+            AddOne();
             return RedirectToAction("Index");
         }
 
-        public void AddTwo()
+        public void AddOne()
         {
             _productRepositorySingleton.Add();
         }
